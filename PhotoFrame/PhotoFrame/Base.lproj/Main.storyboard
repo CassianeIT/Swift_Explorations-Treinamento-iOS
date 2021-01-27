@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8PT-ya-zdp">
+                                <rect key="frame" x="38" y="199.5" width="338" height="497"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boat" highlightedImage="Boat" translatesAutoresizingMaskIntoConstraints="NO" id="LGa-Tz-cSE">
+                                        <rect key="frame" x="18" y="-8" width="304" height="512"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="512" id="g4C-o4-jyD"/>
+                                            <constraint firstAttribute="width" constant="304" id="mXr-8W-P7d"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.3958000414299242" green="0.24250350707363377" blue="0.079030688275225094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="LGa-Tz-cSE" firstAttribute="centerX" secondItem="8PT-ya-zdp" secondAttribute="centerX" id="9Sh-ee-1HR"/>
+                                    <constraint firstAttribute="trailing" secondItem="LGa-Tz-cSE" secondAttribute="trailing" constant="18" id="clR-CA-5qi"/>
+                                    <constraint firstItem="LGa-Tz-cSE" firstAttribute="centerY" secondItem="8PT-ya-zdp" secondAttribute="centerY" id="eeg-u2-Y5n"/>
+                                    <constraint firstAttribute="height" constant="497" id="o1Q-xf-MaR"/>
+                                    <constraint firstItem="LGa-Tz-cSE" firstAttribute="leading" secondItem="8PT-ya-zdp" secondAttribute="leading" constant="18" id="sQS-rs-F64"/>
+                                    <constraint firstAttribute="width" constant="338" id="yRn-7H-Gk4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gUT-4z-LQp"/>
+                        <color key="backgroundColor" red="0.77653634549999995" green="0.81924372909999998" blue="0.854901731" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="8PT-ya-zdp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gdI-kj-Sce"/>
+                            <constraint firstItem="8PT-ya-zdp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hGW-oc-3qq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2423.1884057971015" y="-103.125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Boat" width="640" height="960"/>
+    </resources>
+</document>
