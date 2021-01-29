@@ -35,7 +35,7 @@ rightBot.shakeItLeft()
 rightBot.shakeItCenter()
 rightBot.leftLegUp()
 rightBot.leftLegDown()
-
+rightBot.defabulize()
 
 
 

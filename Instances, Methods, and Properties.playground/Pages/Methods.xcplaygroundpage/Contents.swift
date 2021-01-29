@@ -5,6 +5,7 @@
  
  Here are two string instances:
  */
+// vamos criar
 let introduction = "It was a dark and stormy night"
 let alternateIntroduction = "Once upon a time"
 /*:
@@ -17,6 +18,10 @@ let alternateIntroduction = "Once upon a time"
  
  Instance methods are called by using a period (`.`) after the instance, followed by the method call:
  */
+// como introduction e alternate sao instancias do tipo String.
+// passamos a ter acesso as propriedades e metodos deste tipo.
+// hasPrefix é um método do tipo String, que verifica se tem "It was" la na let introduction acima, essa estrutura nao funciona no xcode, nele precisamos usar algo parecido com a func hasPrefix(_ prefix: String) -> Bool
+
 introduction.hasPrefix("It was")
 
 introduction.hasPrefix("It wasn't")

@@ -9,6 +9,8 @@ let minutesPerChore = 10
 //: How can you find out how long all of your chores are going to take? You need to know how many chores are on the list. You can find out the number of items in an array using the `count` property, which is an `Int`:
 let numberOfChores = chores.count
 let choresTime = numberOfChores * minutesPerChore
+// ou choresTime = numberOfChores * minutesPerChore
+print (choresTime)
 /*:
 Next learn how the type system in Swift handles arrays.\
 [Previous](@previous)  |  page 4 of 18  |  [Next: Types](@next)

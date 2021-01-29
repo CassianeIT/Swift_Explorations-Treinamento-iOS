@@ -14,6 +14,8 @@ func invite(friend: String) {
 invite(friend: friends[0])
 invite(friend: friends[1])
 invite(friend: friends[2])
+invite(friend: friends[3])
+invite(friend: friends[4])
 //...
 /*:
 This code works, but leaves you with a few problems. You need to know how many things are in the array so you know when to stop calling the function. You also have to write the function calls over and over again. The more guests you want to invite, the more `invite` functions you'd have to type. Isn't the point of code that it can automatically do work for you? Plus, what if you accidentally mistyped a number and skipped a guest? How would you ever know?
