@@ -42,7 +42,7 @@ class PiggyBank {
  - callout(Experiment): Uncomment the line below to see an example of an illegal `UInt8` value.
  */
 var bank = PiggyBank()
-//bank.deposit(pennies: 500)
+bank.deposit(pennies: 255)
 /*:
  The console should print "`Integer literal '500' overflows when stored into 'UInt8'.`"
  

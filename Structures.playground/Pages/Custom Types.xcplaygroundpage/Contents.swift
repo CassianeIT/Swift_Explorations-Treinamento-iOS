@@ -27,7 +27,7 @@ Remember from the Instances lesson that every type has at least one initializer.
 
  - Experiment: Try creating a new `Song`. Notice that the autocompletion pop-up menu will include the memberwise initializer.
  */
-
+let song2 = Song(title: "Whats love", artist: "Kygo", duration: 300)
 /*:
 Next, learn more about the properties of a struct.
 

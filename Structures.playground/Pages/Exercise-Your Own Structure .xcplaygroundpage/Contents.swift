@@ -6,6 +6,43 @@
  Think of another real-world object and its properties. Make up some actions or behaviors that the object might be able to perform. Write them all in plain English first in a comment:
  */
  // Add your English-language description of the type here. Make sure to add // before each line of your comment description.
+/*
+ Dog:
+ Breed/Raça - Imutável - String
+ Age/Idade - mutável - Int
+ Weight/Peso - mutável - Double
+ Bark/Latir ()
+ Bite ()
+ Sleep ()
+ */
+
+// Crie a estrutura baseado nas caracteristicas acima
+struct Dog {
+    let breed: String
+    var age: Int
+    var weight: Double
+    var bark: Bool
+    
+    
+    mutating func barkOn (mode: Bool) {
+        bark = mode
+//        if bark == true {
+//            print ("Quieta, pare de latir")
+//        } else if bark == false {
+//            print ("Boa menina")
+//        }
+//
+        print(bark ? "Quieta pare de latir" : "Boa menina")
+    }
+        
+        func barkOff () -> Bool {
+            return bark
+        }
+    }
+
+
+var lara = Dog (breed: "Beagle", age: 2, weight: 10, bark: true)
+print(lara.barkOn(mode: true))
 
 /*:
  - callout(Exercise): 

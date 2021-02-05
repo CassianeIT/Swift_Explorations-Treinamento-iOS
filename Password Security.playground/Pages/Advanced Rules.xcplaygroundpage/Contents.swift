@@ -27,7 +27,9 @@ let punctuation = "!@#$%^&*(),.<>;'`~[]{}\\|/?_-+= "
  
  - Note: To detect whether a character is uppercase, use the `isUppercase` property.
  */
-
+let user = "teste"
+let senha = "C@pivara222222222"
+validPassword(username: user, password: senha)
 /*:
 [Previous](@previous)  |  page 3 of 5  |  [Next: Custom Algorithm](@next)
  */

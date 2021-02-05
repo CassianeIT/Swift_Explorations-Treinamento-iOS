@@ -24,11 +24,15 @@ func closestMatch(for string: String, from potentialMatches: [String]) -> String
     
     for i in 0 ..< potentialMatches.count {
         // Get the potential match at index i
-        
+        let potencialMatch = potentialMatches[i]
         // Get the edit distance from the string to the potential match
-        
+        let distance = editDistance(from: string, to: potencialMatch)
         // If the distance calculated above is better than best edit distance,
         // update the best edit distance and best match index
+        if distance < bestEditDistance {
+            bestMatchIndex = i
+            bestEditDistance = distance
+        }
     }
     
     return potentialMatches[bestMatchIndex]
@@ -53,26 +57,42 @@ print("\n\n***** THIRD CLEANING PASS *****\n\n")
 print("\n\n***** TABULATION FOR VALID DATA ******\n\n")
 
 // Create a Tabulator instance.
-
+var tabulator = Tabulator ()
 // Loop through surveyData. Make a lowercase version of each value.
 //      - If the catalog contains the value, increment its count.
 //      - Otherwise, find the closest match for the value and increment the count for that.
 
+for item in surveyData {
+    let lowerItem = item.lowercased()
+    if lowercaseCatalog.contains(lowerItem){
+    tabulator.incrementCount(forValue: item.lowercased())
+    } else {
+        //Vamos tentar encontrar o match
+        let itemClosestMatch = closestMatch(for: lowerItem, from: lowercaseCatalog)
+        tabulator.incrementCount(forValue: itemClosestMatch)
+        print("\(item): -> \(itemClosestMatch)")
+    }
+}
 // Loop through all tabulator values. Print only those that are contained in the lowercase version of the show catalog.
 
 // Print a header
 print("\n\n***** DATA ERRORS ******\n\n")
 
 // Create a variable to keep a count of the errors.
-
+var errorCount = 0
 // Loop through all tabulator values.
 //      If a value is not contained in the lowercase show catalog:
 //      - Increase the error count
 //      - Print it
+for item in tabulator.values {
+    if !lowercaseCatalog.contains(item) {
+        errorCount += 1
+        print(item)
+    }
+}
 
 // Print the error count.
-
-
+print ("Total de erros encontrados: \(errorCount)")
 /*:
 [Previous](@previous)  |  page 7 of 11  |  [Next: Higher-Order Information](@next)
  */

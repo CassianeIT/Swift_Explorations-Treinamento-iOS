@@ -8,9 +8,13 @@
  - callout(Exercise): Create a new catalog containing lowercased versions of all the shows.
  */
 // Make a new array variable.
+var lowerCaseCatalog: [String] = []
 
 // For all shows in showCatalog, add a lowercase version to the array.
-
+for item in showCatalog {
+    lowerCaseCatalog.append(item.lowercased())
+}
+lowerCaseCatalog
 //:  - callout(Exercise): Tabulate the survey data in a loop, making sure that you convert each value to lowercase before you increment the tabulator. As you did on the previous page, print the valid results, the errors, and the error count. Your code will be similar to the previous page, so feel free to copy it and paste it here as a starting point.
 print("\n\n***** SECOND CLEANING PASS *****\n\n")
 
@@ -18,8 +22,12 @@ print("\n\n***** SECOND CLEANING PASS *****\n\n")
 print("\n\n***** TABULATION FOR VALID DATA ******\n\n")
 
 // Create a Tabulator instance.
+var tabulator = Tabulator()
 
 // Loop through surveyData. Make a lowercase version of each value, then increment its count.
+for item in surveyData {
+    tabulator.incrementCount(forValue: item.lowercased())
+}
 
 // Loop through all tabulator values. Print only those that are contained in the lowercase version of the show catalog.
 
@@ -27,14 +35,20 @@ print("\n\n***** TABULATION FOR VALID DATA ******\n\n")
 print("\n\n***** DATA ERRORS ******\n\n")
 
 // Create a variable to keep a count of the errors.
-
+var errorCount = 0
 // Loop through all tabulator values.
 // If a value is not contained in the lowercase show catalog:
 // - Increase the error count
 // - Print it
+for item in tabulator.values {
+    if !lowerCaseCatalog.contains(item) {
+        errorCount += 1
+        print(item)
+    }
+}
 
 // Print the error count.
-
+print ("Total de erros encontrados: \(errorCount)")
 /*:
  You should see the error count go from 13 down to just 3. Congratulations! You've made more data available to the Streaming Plus marketing team by correcting the capitalization errors.
  

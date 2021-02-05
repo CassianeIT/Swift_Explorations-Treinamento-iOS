@@ -12,7 +12,7 @@
 import Foundation
 
 func passwordIsCorrect(_ password: String) -> Bool {
-    return password == "123"
+    return password == "1300"
 }
 
 let digits = "0123456789"
@@ -26,13 +26,15 @@ func guessPasswordOfThreeCharacters(containing characters: String) {
     for a in characters {
         for b in characters {
             for c in characters {
-                password = String(a) + String(b) + String(c)
-                if passwordIsCorrect(password) {
-                    print("Found password: \(password)")
-                    // The return statement below means that the function exits
-                    // early when the password is guessed, rather than executing
-                    // all loops to completion.
-                    return
+                for d in characters {
+                    password = String(a) + String(b) + String(c) + String(d)
+                    if passwordIsCorrect(password) {
+                        print("Found password: \(password)")
+                        // The return statement below means that the function exits
+                        // early when the password is guessed, rather than executing
+                        // all loops to completion.
+                        return
+                    }
                 }
             }
         }

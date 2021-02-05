@@ -26,7 +26,25 @@ let tenMostCommonPasswords = [
  
  Use the `contains()` method of `Array` to make sure the user hasn't chosen one of these passwords. Display a message informing the user whether or not they've chosen a secure password.
  */
-let password = "password"
+let password: Array = ["password","123456", "12345678", "qwerty", "12345", "123456789", "letmein", "1234567", "football", "iloveyou"]
+
+if password.contains("password") {
+   // print("Senha não segura. Sugestão: coloque caracteres especiais e/ou letras Maiusculas na sua senha")
+} else {
+    //print("Senha criada com sucesso")
+}
+
+// Solução com função - by Willian
+func segurePassword(password: String) {
+
+if password.contains(password) {
+    print("Senha não segura. Sugestão: coloque caracteres especiais e/ou letras Maiusculas na sua senha")
+} else {
+    print("Senha criada com sucesso")
+}
+}
+
+segurePassword(password: "12345678")
 
 /*:
 page 1 of 5  |  [Next: Checking for Characters](@next)

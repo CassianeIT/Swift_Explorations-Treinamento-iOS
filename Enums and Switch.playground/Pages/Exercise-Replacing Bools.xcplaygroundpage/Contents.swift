@@ -7,8 +7,14 @@
 struct Enemy {
     let strength: Int
     let speed: Int
-    let weapon: Bool
+    var weapon: arm
 }
+
+enum arm {
+    case  none, sword, rubberMallet
+}
+
+Enemy.init(strength: 20, speed: 30, weapon: .rubberMallet)
 /*:
  As your game has developed, you’ve decided that your enemies might have more than one type of weapon.
 

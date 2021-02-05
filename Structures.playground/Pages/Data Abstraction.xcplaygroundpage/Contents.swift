@@ -12,8 +12,16 @@ let songTitles = ["Ooh yeah", "Maybe", "No, no, no", "Makin' up your mind"]
 let artists = ["Brenda and the Del-chords", "Brenda and the Del-chords", "Fizz", "Boom!"]
 let durations = [90, 200, 150, 440]
 
-func songInformation(/* supply parameters here*/) -> String {
+func songInformation(title: String, artist: String, duration: Int) -> String {
     /* Return a string describing the song,
      e.g. "\"Maybe\" by Brenda and the Del-chords, duration 200 seconds"
      */
+    return "\(title) by \(artist) with duration of \(duration)"
 }
+
+let song = songInformation(title: songTitles[1], artist: artists[1], duration: durations[1])
+print(song)
+
+/*:
+[Previous](@previous)  |  page 4 of 10  |  [Next: Mutability](@next)
+*/

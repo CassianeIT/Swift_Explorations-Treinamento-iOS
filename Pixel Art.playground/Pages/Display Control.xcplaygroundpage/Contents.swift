@@ -11,7 +11,7 @@ display.backgroundColor = .cyan
  
 - callout(Experiment): Add a few pixels and change the background color again.
  */
-
+display.setPixel(x: 5, y: 5, color: .blue)
 /*:
  Notice that you don't see the first background color at all. That's because all the operations execute quickly when your code runs.
  

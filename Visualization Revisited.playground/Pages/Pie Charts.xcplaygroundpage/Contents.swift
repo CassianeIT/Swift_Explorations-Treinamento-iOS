@@ -48,7 +48,11 @@
  - callout(Exercise): Create a pie chart using your own data. Play with different `scale` and `offset` properties to see how they affect the look of your chart.
  */
 makePieChart()
-
+pieChartView.wedges = [
+    PieWedge(proportion: 0.5, color: .red),
+    PieWedge(proportion: 0.5, color: .blue)
+    
+]
 /*:
 [Previous](@previous)  |  page 2 of 9  |  [Next: Pie Chart Settings](@next)
  */

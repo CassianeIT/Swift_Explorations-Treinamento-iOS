@@ -17,6 +17,9 @@
  */
 var tabulator = Tabulator()
 
+tabulator.incrementCount(forValue: "The Fourth Time")
+tabulator.incrementCount(forValue: "Ocean Express")
+tabulator.incrementCount(forValue: "The Sternwood Five")
 tabulator.incrementCount(forValue: "Ocean Express")
 
 print(tabulator.tabulatedValues)

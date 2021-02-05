@@ -35,8 +35,9 @@ let punctuation = "!@#$%^&*(),.<>;'`~[]{}\\|/?_-+= "
  
  As a bonus, consider adding more detailed error messages to let the user know exactly which rule they failed to observe.
  */
-let password = "password"
 
+
+validPassword(username: "C@pivara", password: "C@pivara2")
 /*:
 [Previous](@previous)  |  page 2 of 5  |  [Next: Advanced Rules](@next)
  */

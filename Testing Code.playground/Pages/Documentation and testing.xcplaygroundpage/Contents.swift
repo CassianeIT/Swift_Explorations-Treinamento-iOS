@@ -53,4 +53,7 @@ bank1.deposit(pennies: 100)
 bank1.balance() == 100 // This should be true
 
 // More test cases below...
+//bank1.deposit(pennies: 100)
+//bank1.balance() == 200 // This should be true
+
 //: [Previous](@previous)  |  page 4 of 7  |  [Next: Making Change](@next)
