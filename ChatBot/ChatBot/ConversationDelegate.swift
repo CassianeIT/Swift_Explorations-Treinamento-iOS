@@ -8,16 +8,25 @@ struct ConversationDelegate {
         } else if lowerQuestion == "where are the cookies?" {
             return "In the cookie jar!"
         } else if lowerQuestion.hasPrefix("where") {
-            return "To the North!"
+            return "Where what?!"
+        } else if lowerQuestion.hasPrefix("coffe") {
+            return "I love coffe.."
         } else {
-            let defaultNumber = question.count % 3
+            let defaultNumber = question.count % 4
+            // essa expessão ira retornar 0, 1 ou 2
+            // print("\(question.count % 3)")
             
             if defaultNumber == 0 {
+                //0
                 return "That really depends"
             } else if defaultNumber == 1 {
-                return "I think so, yes"
-            } else {
+                //1
                 return "Ask me again tomorrow"
+            } else if defaultNumber == 2 {
+                //2
+                return "Sorry, repeat"
+            } else {
+                return "Don't eat too many cookies, get fat!"
             }
         }
     }
