@@ -18,10 +18,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func pedraAction(_ sender: UIButton) {
+        play(userSign: .pedra)
     }
     @IBAction func papelAction(_ sender: UIButton) {
+        play(userSign: .papel)
     }
     @IBAction func tesouraAction(_ sender: UIButton) {
+        play(userSign: .tesoura)
     }
     @IBAction func playAgainAction(_ sender: UIButton) {
         updateUI(state: .iniciar)
@@ -29,6 +32,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         updateUI(state: .iniciar)
     }
@@ -52,10 +56,13 @@ class ViewController: UIViewController {
             
         case .ganhar:
             view.backgroundColor = .green
-        case .perder:
+            _ = UIColor(named: "#79FFBE")
+            case .perder:
             view.backgroundColor = .green
+            
         case .empate:
             view.backgroundColor = .green
+            
         }
     }
     
